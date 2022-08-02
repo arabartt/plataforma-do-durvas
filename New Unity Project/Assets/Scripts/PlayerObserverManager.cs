@@ -18,7 +18,5 @@ public static class PlayerObserverManager
         // caso tenha, mande o value para todos 
         OnCoinsChanged.Invoke(value);
     }
-    
-
 
 }

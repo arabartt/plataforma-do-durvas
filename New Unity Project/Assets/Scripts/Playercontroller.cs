@@ -8,7 +8,13 @@ using UnityEngine.InputSystem;
 public class Playercontroller : MonoBehaviour
 {
    // número de moedas coletadas 
-   public int coins = 0;
+   public int coins = 0; 
+
+   // número de prismas coletados 
+   public int prisms = 0; 
+   
+   // Referencia elemento interface de texto 
+   public TMP_Text prismText;
    
    // Guarda um areferência para os controllers que criamos no InputAction
    private GameControls _gameControls;
@@ -63,6 +69,7 @@ public class Playercontroller : MonoBehaviour
       {
          if (obj.performed) Jump();
       }
+      
       
    }
 
@@ -151,6 +158,23 @@ public class Playercontroller : MonoBehaviour
          Destroy(other.gameObject);
          
       }
+      if (other.CompareTag("Prism"))
+      {
+         //Aumente o número de coins de um jogador em uma unidade 
+         prisms ++;
+         
+         // Atualizar o numero de coins na interface 
+
+         prismText.text = prisms.ToString();
+         
+         // Manda a notificação da mudança do valor de coins 
+         PlayerObserverManager.CoinsChanged(prisms);
+         
+         //destrua o objeto do coin 
+         Destroy(other.gameObject);
+         
+      }
       
    }
+   
 }
