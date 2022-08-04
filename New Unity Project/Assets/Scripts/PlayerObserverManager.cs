@@ -19,4 +19,11 @@ public static class PlayerObserverManager
         OnCoinsChanged.Invoke(value);
     }
 
+    public static Action<int> OnPrismchanged;
+
+    public static void PrismChanged(int value)
+    {
+        OnPrismchanged?.Invoke(value);
+    }
+    
 }

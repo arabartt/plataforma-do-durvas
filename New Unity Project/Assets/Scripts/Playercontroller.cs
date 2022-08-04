@@ -165,10 +165,10 @@ public class Playercontroller : MonoBehaviour
          
          // Atualizar o numero de coins na interface 
 
-         prismText.text = prisms.ToString();
+         //prismText.text = prisms.ToString();
          
          // Manda a notificação da mudança do valor de coins 
-         PlayerObserverManager.CoinsChanged(prisms);
+         PlayerObserverManager.PrismChanged(prisms);
          
          //destrua o objeto do coin 
          Destroy(other.gameObject);
