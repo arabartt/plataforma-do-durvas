@@ -228,5 +228,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guiName: GUI
-  levelName: Prototype
-  playerAndCameraPrefab: {fileID: 245510084224836544, guid: 84cc38d194c94d440b16a8d4d832c42b, type: 3}
+  levelName: Proto2D
+  playerAndCameraPrefab: {fileID: 4565546482914237777, guid: 5654516851ed59c47899a2e66e4fd5f9, type: 3}
